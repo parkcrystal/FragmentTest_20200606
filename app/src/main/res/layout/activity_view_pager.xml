@@ -8,7 +8,7 @@
     tools:context=".ViewPagerActivity">
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/myViewPager"
+        android:id="@+id/myViewPager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

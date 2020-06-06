@@ -39,7 +39,7 @@ class StudentAdapter(context: Context, resId: Int, list: List<Student>):ArrayAda
             gender  = "여성"
         }
 
-        studentInfoTxt.text = "${data.name}($age}세, ${gender})"
+        studentInfoTxt.text = "${data.name}($age)세, ${gender})"
 
         return row
 

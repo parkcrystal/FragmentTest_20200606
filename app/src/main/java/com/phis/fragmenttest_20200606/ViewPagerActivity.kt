@@ -21,8 +21,6 @@ class ViewPagerActivity: BaseActivity() {
     }
 
     override fun setValues() {
-        myAdapter = MainViewPagerAdapter(supportFragmentManager)
-        myViewPager.adapter = myAdapter
     }
 
 

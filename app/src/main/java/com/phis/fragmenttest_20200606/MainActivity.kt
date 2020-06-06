@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentPagerAdapter
 import com.phis.fragmenttest_20200606.adapters.MainViewPagerAdapter
+import com.phis.fragmenttest_20200606.adapters.StudentAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_view_pager.*
+import kotlinx.android.synthetic.main.fragment_student_list.*
 
 class MainActivity : BaseActivity() {
 
@@ -23,6 +26,10 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
+        mainAdapter = MainViewPagerAdapter(supportFragmentManager)
+        myViewPager.adapter = mainAdapter
+
+        myTabLayout.setupWithViewPager(myViewPager)
 
     }
 
