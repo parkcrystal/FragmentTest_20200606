@@ -1,19 +1,17 @@
 package com.phis.fragmenttest_20200606
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentPagerAdapter
 import com.phis.fragmenttest_20200606.adapters.MainViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_view_pager.*
 
-class MainActivity : BaseActivity() {
+class ViewPagerActivity: BaseActivity() {
 
 
-    lateinit var mainAdapter: MainViewPagerAdapter
+    lateinit var myAdapter : MainViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_view_pager)
         setupEvents()
         setValues()
     }
@@ -23,7 +21,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setValues() {
-
+        myAdapter = MainViewPagerAdapter(supportFragmentManager)
+        myViewPager.adapter = myAdapter
     }
+
 
 }
