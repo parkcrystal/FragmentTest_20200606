@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.fragment_my_profile.*
 import kotlinx.android.synthetic.main.fragment_student_list.*
 
 
-class StudentListFragment: Fragment() {
+class StudentListFragment: BaseFragment() {
 
     val studentList = ArrayList<Student>()
     lateinit var mStudentAdapter: StudentAdapter
@@ -28,8 +28,8 @@ class StudentListFragment: Fragment() {
         return inflater.inflate(R.layout.fragment_student_list, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun setValues() {
+
 
         studentList.add(Student("조경진", 1988, true))
         studentList.add(Student("김광철", 1966, true))
@@ -42,7 +42,18 @@ class StudentListFragment: Fragment() {
 
         mStudentAdapter = StudentAdapter(activity as Context, R.layout.student_list_item, studentList)
         studentListView.adapter = mStudentAdapter
+    }
 
+
+
+    override fun setupEvents() {
+
+    }
+
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+
+        super.onActivityCreated(savedInstanceState)
     }
 
 
